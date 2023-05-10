@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+<h2>Exemplo 1</h2>
+
+<form action="#">
+  <fieldset>
+    <legend>Formulário 1</legend>
+    <p>
+    <label>Nome:
+      <input type="text" value="" placeholder="Nome" name="fname" />
+    </label>
+    </p>
+    <p>
+    <label>Sobrenome:
+      <input type="text" value="" placeholder="Sobrenome" name="lname" />
+    </label>
+    </p>
+    <input type="button" value="input button - não faz o submit">
+    <input type="submit" value="input submit - faz o submit">
+    <button>O botão é um input button que já faz o submit direto</button>
+  </fieldset>
+</form>
+<hr />
+<h2>Exemplos 2</h2>
+<select>
+  <option>Selecione um Estado</option>
+  <option value="PR">Paraná</option>
+  <option value="SP" selected>São Paulo</option> <!-- ao invés de aparecer
+  a primeira opção, aparecerá São Paulo -->
+  <option value="MT">Mato Grosso</option>
+  <option value="RS">Rio Grande do Sul</option>
+  <option value="RJ">Rio de Janeiro</option>
+</select>
+<hr />
+<label for="descricao">Descrição</label>
+<textarea name="descricao" id="descricao" cols="50" rows="7"></textarea>
+<hr />
+<form action="#" enctype="multipart/form-data"> <!-- precisa do enctype
+para tratar os arquivos enviados -->
+  <fieldset>
+    <legend>Formulario 2</legend>
+    <label>Cidades
+      <input list="cidades">
+
+    <datalist id="cidades">
+      <option value="Rio">Rio</option>
+      <option value="São Paulo">São Paulo</option>
+    </datalist>
+    </label>
+    <section>
+    <label> Valor A
+      <input type="checkbox" name="adicionais[]" value="valorA">
+    </label>
+      <label> Valor B
+        <input type="checkbox" name="adicionais[]" value="valorB">
+      </label>
+      <label> Valor C
+        <input type="checkbox" name="adicionais[]" value="valorC">
+      </label>
+    </section>
+    <hr />
+    <label>Data:
+      <input type="date">
+    </label>
+    <hr />
+    <label>Data2:
+      <input type="datetime-local">
+    </label>
+    <hr />
+    <label>Email
+      <input type="email">
+    </label>
+    <hr />
+    <input type="file" name="imagem"> <!-- precisa definir o enctype no
+    inicio do form para funcionar -->
+    <input type="hidden" value="">
+    <label>Número:
+      <input type="number">
+    </label>
+    <input type="reset">
+    <hr />
+    <label>Range
+      <input type="range">
+    </label>
+    <hr />
+    <label>Telefone
+      <input type="tel">
+    </label>
+    <hr />
+    <label>Senha:
+      <input type="password">
+    </label>
+    <hr />
+    <label>Dinheiro
+      <input type="radio" name="forma_pagamento" value="dinheiro">
+    </label>
+    <label>Cartão Débito
+      <input type="radio" name="forma_pagamento" value="cartão débito">
+    </label>
+    <label>Cartão Crédito
+      <input type="radio" name="forma_pagamento" value="cartão crédito">
+    </label>
+    <label>PIX
+      <input type="radio" name="forma_pagamento" value="PIX">
+    </label>
+    <label>Vale Alimentação
+      <input type="radio" name="forma_pagamento" value="vale alimentação">
+    </label>
+
+
+  </fieldset>
+</form>
+</body>
+</html>
