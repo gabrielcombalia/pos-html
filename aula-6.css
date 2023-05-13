@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3vw;
+
+}
+p {
+    font-size: 1.7vw;
+}
+.esquerda {
+    background-color: blue;
+    /*padding: 0px 0 10px 2px;*/
+    /*padding: top, right, bottom, left;*/
+    /*padding: top/bottom, right/left;*/
+    float: left;
+    width: 30%;
+    padding: 10px 10px 10px 10px;
+}
+.centro {
+    background-color: indigo;
+    width: 30%;
+    float: left;
+    padding: 10px 10px 10px 10px;
+}
+.direita {
+    background-color: green;
+    float: left;
+    width: 30%;
+    padding: 10px 10px 10px 10px;
+}
+@media screen and (max-width: 500px) {
+    .esquerda, .direita, .centro {
+        width: 100%;
+    }
+
+}
