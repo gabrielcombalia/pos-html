@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 2vw;
+}
+ul {
+    list-style: none;
+}
+#box1 {
+    border: salmon outset;
+    background-color: salmon;
+    width: 350px;
+    margin: 20px 20px;
+    cursor: pointer;
+
+}
+
+#box1:hover {
+    background-color: coral;
+    color: white;
+}
+#box1:active {
+    border: inset;
+}
+
+#form {
+    margin: 20px 20px;
+}
+
+#form input {
+    font-size: 2vw;
+}
+
+#form input:focus {
+    color: white;
+    background-color: #555555;
+}
+
+#links {
+    margin: 20px 20px;
+    border: 1px solid;
+    padding: 10px 10px;
+    width: 350px;
+}
+
+.menu-links a {
+    text-decoration: none;
+}
+.menu-links li {
+    margin: 0 0 10px 0;
+}
+.menu-links a:link {
+    color: black;
+}
+.menu-links a:visited {
+    color: blueviolet;
+}
+.menu-links a:hover {
+    color: blue;
+}
+.menu-links a:active {
+    color: green;
+}
+
+#box2 p {
+    display: none;
+}
+
+#box2 h2 {
+    cursor: pointer;
+}
+#box2:hover p {
+    display: block;
+}
+
+#box3 {
+    margin: 20px;
+    border: 1px black dotted;
+}
+
+#box3 p:first-child {
+    color: red;
+}
+#box3 p:first-child i {
+    color: blue;
+}
+#box3 p:last-child {
+    color: red;
+}
+
+/* o parametro !important depois do comando e
+antes do ponto virgula eleva o comando css a pripridade maxima*/
+
+/*#box3 p:last-child {*/
+/*    color: red !important;*/
+/*}*/
+

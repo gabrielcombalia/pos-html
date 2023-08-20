@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 2vw;
+    font-family: 'Smokum', 'Oswald', 'Roboto', sans-serif;
+}
+
+header {
+    color: white;
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+}
+ #menu-links {
+     background-color: grey;
+     font-family: sans-serif;
+
+ }
+ #menu-links > ul {
+     list-style: none;
+     padding: 0;
+     margin: auto;
+     width: 80%;
+ }
+
+ #menu-links ul li {
+     display: inline;
+     position: relative;
+
+ }
+
+#menu-links ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    transition: background-color .6s;
+
+}
+
+#menu-links ul a:hover {
+    background-color: #4f9f3f;
+
+}
+
+#menu-links > ul > li:last-child > a {
+    float: right;
+    background-color: #4f9f3f;
+}
+
+#menu-links > ul > li:last-child > a:hover {
+    float: right;
+    background-color: green;
+
+}
+
+#menu-links ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+
+}
+#menu-links ul li:hover ul {
+    display: block;
+}
+
+#menu-links ul ul li a {
+    display: block;
+    background-color: grey;
+}

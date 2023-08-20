@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: SansSerif, sans-serif;
+    font-size: 2vw;
+}
+
+h2 {
+    text-align: center;
+
+}
+
+p {
+    margin: 10px;
+}
+
+#main {
+    margin-top: 15px;
+}
+
+input[type] {
+    border: 2px solid #4f9f3f;
+}
+input[type="button"] {
+    border: 5px solid #0f0f99;
+    background-color: #555555;
+    cursor: pointer; /*dá a sençação que é clicável*/
+    font-weight: bold;
+}
+/*o acento circunflexo indica que inicia com a letra ou string.
+no caso o titulo inteiro é "primeiro teste" e o segundo é "segundo teste"*/
+p[title^="p"] {
+    background-color: #555555;
+}
+
+p[title^="s"] {
+    background-color: #4f9f3f;
+}
+p[title^="pi"] { /* nada começa com "pi" */
+    background-color: #000000;
+}
+/* o cifrão vai buscar o trecho final do title */
+p[title$="alo"] {
+    font-size: 3vw;
+}
+/*quando quero procurar um trecho na string title uso */
+p[title~="-"] {
+    border: black dashed;
+}
+
+

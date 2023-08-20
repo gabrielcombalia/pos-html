@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: SansSerif, sans-serif;
+    font-size: 2vw;
+}
+
+h2 {
+    text-align: center;
+
+}
+ #primeira-div {
+     margin: 0 0 20px 0;
+
+ }
+
+ #primeira-div p {
+    font-family: serif;
+     background-color: aqua;
+ }
+
+ /* no exemplo abaixo, percebemos que o ascendente direto do elemento/tag tem influencia maior na tag
+ Logo, no exemplo o parafrago não ficará azul e sim vermelho
+  */
+ #div-defora p {
+     color: blue;
+ }
+ #div-dedentro > p {
+     color: red;
+ }
+
+ /*o simbolo > significa que estou lidando com um descentente direto.
+ Quando não há simbolo algum, pode ser um neto, bisneto ou infinito*/
+
+h3 + p {
+    border: black outset;
+    background-color: #555555;
+    cursor: pointer;
+}
+
+p ~ h4 {
+    color: aqua;
+}
+/*mudará todas as h4 onde houver um irmão p dentro da mesma tag pai*/
+
+
+/* no caso acima, quando houver duas tags irmãs e essas forem h3 seguido de p,
+o p se comportará como descrito dentro das chaves*/
+
