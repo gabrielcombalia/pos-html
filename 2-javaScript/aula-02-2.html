@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Gabriel Combalia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina responsiva</title>
+    <link rel="stylesheet" href="../1-html/aula-6.css">
+</head>
+<body>
+<pre>
+
+    let isAtivo = false
+console.log(isAtivo)
+console.log(typeof isAtivo)
+
+isAtivo = true
+console.log(isAtivo)
+console.log(typeof isAtivo)
+
+isAtivo = 1
+console.log(isAtivo)
+console.log(typeof isAtivo)
+
+isAtivo = 0
+console.log(isAtivo)
+console.log(typeof isAtivo)
+
+//tudo é encarado como verdadeiro. somente o zero, a string vazia, o null, o undefined e o NAN é tomado como falso
+
+console.log(!!isAtivo)
+console.log(!!256743)
+console.log(!!-5732)
+console.log('string vazia é '+!!'')  // uma string vazia é encarada como false
+console.log(!!'fdfdf')  // uma string
+console.log(!![]) //uma array
+console.log(!!{}) // um objeto
+console.log(!!(isAtivo = true))
+console.log(!!Infinity)
+console.log(!!null)
+console.log(!!undefined)
+console.log(!!NaN)
+
+// o teste da negação da negação prova como o javascript se comporta
+
+console.log('---- considerações-------')
+ let nome = ''
+
+console.log(nome)
+console.log(nome || 'Gabriel') // caso seja falso/vazio, o JS mostra a string veraddeira/preenchida
+
+console.log(!!(''||0||null||'verdadeiro'||undefined||NaN))
+
+</pre>
+</body>
+</html>
+

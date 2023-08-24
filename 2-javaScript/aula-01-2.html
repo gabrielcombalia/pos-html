@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Gabriel Combalia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina responsiva</title>
+    <link rel="stylesheet" href="../1-html/aula-6.css">
+</head>
+<body>
+<pre>
+
+
+// existem comportamentos estranhos envolvendo declaração de variaveis como no exemplo abaixo
+
+console.log(a)
+
+// caso eu rode somente isso haverá um erro total
+
+var a = 'eu existo'
+
+// já neste caso, não haverá erro, mas sim, mostrará que a variável não foi definida - 'undefined'. Como se a variável
+// 'a' já tivesse sido declarada antes do console.log. Ou seja, não respeita a ordem de leitura do codigo. Esse
+// comportamento atípico do javascript é chamado d hoisting.
+
+// com o let, não acontece nada disso. dá um erro total se não for declarado a variável
+
+// vamos a um exemplo com o let
+
+if (true) {
+    let b = 'estou aqui dentro da função'
+    console.log(b)
+    //aqui ele vai imprimir
+}
+
+//console.log(b)
+//aqui já vai dar um erro total, pois o b só existe dentro da função. Por isso deixarei comentado
+
+// o professor prefere utilizar o let
+
+// podemos tambem dar u valor de nulo para uma variavel, que é diferente de undefined e not defined, como vimos anteriormente:
+
+let c
+console.log(c)
+
+let d = null
+console.log(d)
+
+// console.log(e)
+// let e = 'estou aqui dentro da função'
+// neste ultimo exemplo comentado, diferentemente do var, como o let acontece erro total indicando variavel 'not defined'
+
+</pre>
+</body>
+</html>
+
