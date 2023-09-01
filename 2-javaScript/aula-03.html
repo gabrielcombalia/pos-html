@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Gabriel Combalia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina responsiva</title>
+    <link rel="stylesheet" href="../1-html/aula-6.css">
+</head>
+<body>
+
+<h2>Parte 1</h2>
+<pre>
+    const  arrayValores = [5, 6.8, 4, 3.0, 9.9, 10]
+
+console.log(arrayValores)
+
+console.log(arrayValores.length)
+
+console.log(arrayValores[4])
+
+console.log(arrayValores[10])
+
+arrayValores[5] = 12
+
+console.log(arrayValores)
+
+arrayValores[12] = 1.5
+
+console.log(arrayValores)
+
+console.log(arrayValores.length)
+
+arrayValores.push(3.5)
+
+console.log(arrayValores)
+
+// o push adiciona mais um item após o ultimo elewento
+
+arrayValores.pop() // remove o ultimo elemento
+
+console.log(arrayValores)
+
+delete arrayValores[1]
+
+console.log(arrayValores)
+
+arrayValores.shift() //remove o primeiro elemento
+
+console.log(arrayValores)
+
+arrayValores.unshift(19)
+
+console.log(arrayValores)
+
+arrayValores.splice(6,3,'joao', 'ana', 'maria', 'nina')
+
+console.log(arrayValores)
+
+arrayValores.splice(11,1)
+
+console.log(arrayValores)
+
+let novoArray = arrayValores.slice(5) //faz um novo array a partir do indice 5
+
+console.log(novoArray)
+
+novoArray = arrayValores.slice(2,8)
+
+console.log(novoArray)
+
+</pre>
+
+<h2>Parte 2</h2>
+<pre>
+    const aprovados = ['João', 'Nina', 'Maria', 'Ana Claudia', 'Gabriel']
+
+// forma traducional
+aprovados.forEach(function (nome, i){
+    console.log(`Nome do aprovado: ${i+1}- ${nome} `)
+})
+
+//arrow function
+aprovados.forEach((nome,i) => {
+    console.log(`Nome do aprovado: ${i+1}- ${nome} `)
+})
+
+// outra forma
+
+aprovados.forEach(nome => console.log(`Nome do aprovado: ${nome}`))
+
+// outra forma
+
+const exibir = nome => console.log(`Nome: ${nome}`)
+aprovados.forEach(exibir)
+
+
+//criando uma função usando a classe array
+Array.prototype.meuForEach = function(callback) {
+    for(let i = 0; i < this.length; i++) {
+        callback(this[i],i, this)
+    }
+}
+const exibir2 = nome => console.log(`Nome2: ${nome}`)
+aprovados.meuForEach(exibir2)
+
+
+</pre>
+
+<h2>Parte 3</h2>
+
+<pre>
+    // o map serve para transformar uma array em outra array com dados transformados
+
+const numeros = [1, 2, 3, 4, 5, 6]
+
+let resultados  = numeros.map(function(e) {
+    return e*2
+})
+
+console.log(resultados)
+
+const soma2 = el => el+2
+const triplo = el => el*3
+const conversaoparaBrl = el => `R$ ${parseFloat(el).toFixed(2).replace('.',',')}`
+
+resultados = numeros.map(soma2).map(triplo).map(conversaoparaBrl)
+
+console.log(resultados)
+</pre>
+
+<h2>Parte 4</h2>
+<pre>
+    // notação json
+const carrinho = [
+    '{"nome": "arroz", "preco": 9.53}',
+    '{"nome": "feijão", "preco": 7.28}',
+    '{"nome": "macarrão", "preco": 3.07}',
+    '{"nome": "tomate", "preco": 2.45}',
+    '{"nome": "ovos", "preco": 15.99}',
+    '{"nome": "sal", "preco": 9}',
+
+]
+
+const jsonParse = json => JSON.parse(json)
+const detalhe = elemento => elemento.preco
+
+const resultado = carrinho.map(jsonParse)
+console.log(carrinho)
+console.log(resultado)
+console.log(resultado.map(detalhe))
+
+// o professor constroi o proprio map na unha
+Array.prototype.meuMap = function (callback) {
+    const newArray = []
+    for(let i=0; i < this.length; i++) {
+        newArray.push(callback(this[i], i, this))
+    }
+    return newArray
+}
+
+const resultado2 = carrinho.meuMap(jsonParse).meuMap(detalhe)
+
+console.log('resultado: ' + resultado2)
+</pre>
+
+</body>
+</html>
+
